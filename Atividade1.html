@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="linha0Coluna0" placeholder="[0,0]" />
+    <input type="number" id="linha0Coluna1"  placeholder="[0,1]"  />
+    <input type="number" id="linha0Coluna2"  placeholder="[0,2]" /><br>
+    <input type="number" id="linha1Coluna0"  placeholder="[1,0]" /> 
+    <input type="number" id="linha1Coluna1" placeholder="[1,1]" />
+    <input type="number" id="linha1Coluna2"  placeholder="[1,2]"  /><br>
+    <input type="number" id="linha2Coluna0"  placeholder="[2,0]" />
+    <input type="number" id="linha2Coluna1"  placeholder="[2,1]" />
+    <input type="number" id="linha2Coluna2"  placeholder="[2,2]" /> <br><br>
+   <p> informe um numero para fazer a multiplicação na matriz
+    <input type="number" id="numeroMultiplicar"></p>
+    <button onclick="calcular()">Calcular</button>
+
+    
+    
+    <p id="resposta1"></p>
+    <p id="resposta2"></p>
+    <p id="resposta3"></p>
+    <p id="resposta4"></p>
+    <p id="resposta5"></p>
+    <p id="resposta6"></p>
+    <p id="resposta7"></p>
+    <p id="resposta8"></p>
+    <p id="resposta9"></p>
+    
+    <script>
+function calcular(){ 
+
+        var matriz3x3 = [
+            [0,0,0],
+            [0,0,0],
+            [0,0,0]
+        ];
+            matriz3x3[0][0] = parseInt(document.getElementById("linha0Coluna0").value);
+            matriz3x3[0][1] = parseInt(document.getElementById("linha0Coluna1").value);
+            matriz3x3[0][2] = parseInt(document.getElementById("linha0Coluna2").value);
+            matriz3x3[1][0] = parseInt(document.getElementById("linha1Coluna0").value);
+            matriz3x3[1][1] = parseInt(document.getElementById("linha1Coluna1").value);
+            matriz3x3[1][2] = parseInt(document.getElementById("linha1Coluna2").value);
+            matriz3x3[2][0] = parseInt(document.getElementById("linha2Coluna0").value);
+            matriz3x3[2][1] = parseInt(document.getElementById("linha2Coluna1").value);   
+            matriz3x3[2][2] = parseInt(document.getElementById("linha2Coluna2").value);         
+
+        var multiplica = parseInt(document.getElementById("numeroMultiplicar").value);
+        var resultado1 = matriz3x3[0][0] * multiplica
+        var resultado2 = matriz3x3[0][1] * multiplica
+        var resultado3 = matriz3x3[0][2] * multiplica
+        var resultado4 = matriz3x3[1][0] * multiplica
+        var resultado5 = matriz3x3[1][1] * multiplica
+        var resultado6 = matriz3x3[1][2] * multiplica
+        var resultado7 = matriz3x3[2][0] * multiplica
+        var resultado8 = matriz3x3[2][1] * multiplica
+        var resultado9 = matriz3x3[2][2] * multiplica
+
+
+        console.log(resultado1)
+        console.log(resultado2)
+        console.log(resultado3)
+        console.log(resultado4)
+        console.log(resultado5)
+        console.log(resultado6)
+        console.log(resultado7)
+        console.log(resultado8)
+        console.log(resultado9)
+        document.getElementById("resposta1").innerHTML = `O resultado é ${resultado1}`;
+        document.getElementById("resposta2").innerHTML = `O resultado é ${resultado2}`;
+        document.getElementById("resposta3").innerHTML = `O resultado é ${resultado3}`;
+        document.getElementById("resposta4").innerHTML = `O resultado é ${resultado4}`;
+        document.getElementById("resposta5").innerHTML = `O resultado é ${resultado5}`;
+        document.getElementById("resposta6").innerHTML = `O resultado é ${resultado6}`;
+        document.getElementById("resposta7").innerHTML = `O resultado é ${resultado7}`;
+        document.getElementById("resposta8").innerHTML = `O resultado é ${resultado8}`;
+        document.getElementById("resposta9").innerHTML = `O resultado é ${resultado9}`;
+
+        
+        
+}
+    </script>
+</body>
+</html>

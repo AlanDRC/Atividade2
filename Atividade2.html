@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="number" id="linha0Coluna0" placeholder="[0,0]" />
+        <input type="number" id="linha0Coluna1"  placeholder="[0,1]"  /> <br />
+        <input type="number" id="linha1Coluna0"  placeholder="[1,0]" />
+        <input type="number" id="linha1Coluna1"  placeholder="[1,1]" /> <br /><br />
+    <button onclick="calcularDeterminante()">Calcular Determinante</button>
+
+    <script>
+
+        function calcularDeterminante(){
+            //declarou ela
+            var matriz2x2 = [
+            [0,0],
+            [0,0]
+            ];
+            matriz2x2[0][0] = parseInt(document.getElementById("linha0Coluna0").value);
+            matriz2x2[0][1] = parseInt(document.getElementById("linha0Coluna1").value);
+            matriz2x2[1][0] = parseInt(document.getElementById("linha1Coluna0").value);
+            matriz2x2[1][1] = parseInt(document.getElementById("linha1Coluna1").value);
+
+            var determinante2x2 = matriz2x2[0][0]*matriz2x2[1][1]-matriz2x2[0][1]*matriz2x2[1][0];
+            console.log(`O determinante é de ${determinante2x2}`);
+
+        }
+
+    </script>
+</body>
+</html>
